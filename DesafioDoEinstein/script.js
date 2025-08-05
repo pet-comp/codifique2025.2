@@ -301,7 +301,7 @@ function mostrarDicas() {
     let counter = 0;
     for (let dica of dicas) {
         counter++;
-        dicasTexto += `<strong>${counter}</strong>. ${dica}<br>`;
+        dicasTexto += `💡 <strong>${counter}</strong>. ${dica}<br>`;
     }
     dicasDiv.innerHTML = dicasTexto;
 }
