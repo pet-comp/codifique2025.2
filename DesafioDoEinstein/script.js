@@ -18,7 +18,7 @@ function carregarProgresso() {
     const progressoSalvo = localStorage.getItem("progressoJogoEinstein");
     if (progressoSalvo) {
         const casasSalvas = JSON.parse(progressoSalvo);
-        
+
         const tabela = document.querySelector("table");
         if (!tabela) return;
 
@@ -29,7 +29,7 @@ function carregarProgresso() {
             for (let row = 0; row < categorias.length; row++) {
                 const categoria = categorias[row];
                 const select = tabela.rows[row].cells[colunaDaTabela].querySelector("select");
-                
+
                 if (select && casaSalva[categoria]) {
                     select.value = casaSalva[categoria];
                 }
@@ -91,7 +91,7 @@ function criarTabela() {
 
 function pintarColuna(coluna, cor) {
     const tabela = document.querySelector("table");
-    
+
     const mapeamentoCores = {
         "vermelha": "#ce4848ff",   // Rosa claro (quase coral)
         "verde": "#94ce85ff",      // Verde maçã
@@ -171,7 +171,7 @@ function verificar(casas) {
     for (const categoria of categorias) {
         const valoresUnicos = new Set();
         let possuiDuplicatas = false;
-        
+
         for (const casa of casas) {
             if (valoresUnicos.has(casa[categoria])) {
                 possuiDuplicatas = true;
@@ -191,12 +191,12 @@ function verificar(casas) {
         document.getElementById("resultado").style.color = "red";
         return;
     }
-    
+
     // Dica 1: A linguagem PHP vive na casa vermelha.
     if (linguagemCasa("PHP") !== corCasa("Vermelha")) {
         erros.push("A linguagem PHP não está na casa vermelha.");
     }
-    
+
     // Dica 2: A linguagem Assembly já coletou todos os morangos de Celeste.
     if (linguagemCasa("Assembly") !== jogoCasa("Celeste")) {
         erros.push("Assembly não está jogando Celeste.");
@@ -266,7 +266,7 @@ function verificar(casas) {
     if (Math.abs(cursoCasa("História") - filmeCasa("Monster High")) !== 1) {
         erros.push("O vizinho de quem cursa História não assiste Monster High.");
     }
-    
+
     const resultado = document.getElementById("resultado");
     if (erros.length === 0) {
         resultado.textContent = "Parabéns, O dígido que você procura é o 3";
@@ -297,7 +297,13 @@ function mostrarDicas() {
     ];
 
     const dicasDiv = document.getElementById("dicas");
-    dicasDiv.innerHTML = dicas.map(d => `💡 ${d}`).join("<br>");
+    let dicasTexto = "";
+    let counter = 0;
+    for (let dica of dicas) {
+        counter++;
+        dicasTexto += `💡 <strong>${counter}</strong>. ${dica}<br>`;
+    }
+    dicasDiv.innerHTML = dicasTexto;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
