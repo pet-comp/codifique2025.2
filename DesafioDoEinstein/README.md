@@ -49,7 +49,7 @@ O projeto é composto por três arquivos principais:
 ## Como Executar o Projeto
 
 Basta acessar ["este link"](https://pet-comp.github.io/codifique2025.2/DesafioDoEinstein/).
-Alternativamente, é possível rodá-lo localmente ao baixar o projeto e abrir o arquivo `index.html` (na pasta `/DesafioDoEinstein`) em seu navegador de preferência.
+Alternativamente, é possível rodá-lo localmente ao baixar o projeto e abrir o arquivo `index.html` em seu navegador de preferência.
 
 ## Tutorial de Resolução do Desafio
 
