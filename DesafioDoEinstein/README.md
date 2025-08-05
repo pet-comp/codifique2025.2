@@ -55,21 +55,21 @@ Alternativamente, é possível rodá-lo localmente ao baixar o projeto e abrir o
 
 Informações necessárias para resolver o desafio.
 
-1. A linguagem PHP vive na casa vermelha.
-2. A linguagem Assembly já coletou todos os morangos de Celeste.
-3. A linguagem JavaScript já foi quase presa por assistir Velozes e furiosos e depois ultrapassar o limite de velocidade achando que estava no filme.
+1. Quem programa em PHP vive na casa vermelha.
+2. Quem programa em Assembly já coletou todos os morangos de Celeste.
+3. Quem programa em JavaScript já foi quase preso por assistir Velozes e furiosos e depois ultrapassar o limite de velocidade achando que estava no filme.
 4. A casa verde fica imediatamente à esquerda da casa roxa.
 5. O dono da casa verde assiste Karatê Kid e depois fica tentando golpear o vento.
-6. A linguagem que cursa Educação Física fica treinando o dia todo enquanto cuida da sua casinha no Stardew Valley.
+6. Quem cursa Educação Física fica treinando o dia todo enquanto cuida da sua casinha no Stardew Valley.
 7. O dono da casa amarela cursa Biologia.
-8. A linguagem que vive na casa do centro assiste Shrek toda noite.
-9. O Python vive na primeira casa.
-10. A linguagem que cursa História vive ao lado de quem joga Roblox.
-11. A linguagem que é viciada em Minecraft vive ao lado de quem cursa Biologia.
-12. A linguagem que cursa Matemática fica assistindo Pokémon enquanto faz contas.
-13. A linguagem C cursa Ciência da Computação.
-14. O Python vive ao lado da casa azul.
-15. A linguagem que cursa História tem um vizinho que assiste Monster High escondido.
+8. Quem vive na casa do centro assiste Shrek toda noite.
+9. Quem programa em Python vive na primeira casa.
+10. Quem cursa História vive ao lado de quem joga Roblox.
+11. Quem é viciado em Minecraft vive ao lado de quem cursa Biologia.
+12. Quem cursa Matemática assiste Pokémon: O Filme enquanto faz contas.
+13. Quem programa em C cursa Ciência da Computação.
+14. Quem programa em Python vive ao lado da casa azul.
+15. Quem cursa História tem um vizinho que assiste Monster High escondido.
 
 ## Tutorial de Resolução do Desafio
 
@@ -88,10 +88,10 @@ A seguir, disponibilizamos um passo-a-passo de como resolver o desafio logicamen
 11. Pela dica 7, sabemos que quem vive na casa amarela cursa Biologia. Sabemos que a casa amarela é a casa 1. Portanto, quem cursa Biologia vive na casa 1.
 12. Pela dica 11, sabemos que quem joga Minecraft vive ao lado de quem cursa Biologia. Como quem cursa Biologia vive na primeira casa, a única casa possível para quem joga Minecraft é a 2.
 13. Pela dica 3, sabemos que quem programa em JavaScript gosta de Velozes e Furiosos. Sabemos que quem vive na casa 1 não programa em JavaScript e que quem vive nas casas 3 e 4 não gosta de Velozes e Furiosos. Portanto, quem gosta desse filme só pode viver nas casas 2 ou 5.
-14. Pela dica 12, sabemos que quem cursa Matemática gosta de Pokémon. Sabemos que quem mora na casa 1 não cursa Matemática e que quem vive nas casas 3 e 4 não gosta de Pokémon. Portanto, quem gosta desse filme só pode viver nas casas 2 ou 5.
-15. Como existem 2 opções para as casas 2 e 5 (Pokémon e Velozes e Furiosos), então quem mora na casa 1 obrigatoriamente precisa gostar de Monster High.
+14. Pela dica 12, sabemos que quem cursa Matemática gosta de Pokémon: O Filme. Sabemos que quem mora na casa 1 não cursa Matemática e que quem vive nas casas 3 e 4 não gosta de Pokémon: O Filme. Portanto, quem gosta desse filme só pode viver nas casas 2 ou 5.
+15. Como existem 2 opções para as casas 2 e 5 (Pokémon: O Filme e Velozes e Furiosos), então quem mora na casa 1 obrigatoriamente precisa gostar de Monster High.
 16. Pela dica 15, sabemos que quem cursa História possui um vizinho que gosta de Monster High. Quem assiste esse filme só possui um vizinho: a casa 2. Portanto, quem vive na casa 2 cursa História.
-17. Pela dica 12, sabemos que quem cursa Matemática assiste Pokémon. Para essa pessoa, as únicas possibilidades são as casas 2 ou 5. Porém, quem vive na casa 2 cursa História. Portanto, essa pessoa mora na casa 5.
+17. Pela dica 12, sabemos que quem cursa Matemática assiste Pokémon: O Filme. Para essa pessoa, as únicas possibilidades são as casas 2 ou 5. Porém, quem vive na casa 2 cursa História. Portanto, essa pessoa mora na casa 5.
 18. Por eliminatória, quem vive na casa 2 assiste Velozes e Furiosos.
 19. Pela dica 3, quem programa em JavaScript gosta de Velozes e Furiosos. Como quem gosta desse filme mora na casa 2, então quem programa nessa linguagem vive na casa 2.
 20. Pela dica 13, quem programa em C cursa Ciências de Computação. Ainda não sabemos quais linguagens de programação as pessoas que moram nas casas 4 e 5 usam, porém sabemos que quem mora na casa 5 cursa Matemática. Portanto, quem vive na casa 4 cursa Computação e programa em C.
