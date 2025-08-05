@@ -51,6 +51,26 @@ O projeto é composto por três arquivos principais:
 Basta acessar ["este link"](https://pet-comp.github.io/codifique2025.2/DesafioDoEinstein/).
 Alternativamente, é possível rodá-lo localmente ao baixar o projeto e abrir o arquivo `index.html` em seu navegador de preferência.
 
+## Afirmações
+
+Informações necessárias para resolver o desafio.
+
+1. A linguagem PHP vive na casa vermelha.
+2. A linguagem Assembly já coletou todos os morangos de Celeste.
+3. A linguagem JavaScript já foi quase presa por assistir Velozes e furiosos e depois ultrapassar o limite de velocidade achando que estava no filme.
+4. A casa verde fica imediatamente à esquerda da casa roxa.
+5. O dono da casa verde assiste Karatê Kid e depois fica tentando golpear o vento.
+6. A linguagem que cursa Educação Física fica treinando o dia todo enquanto cuida da sua casinha no Stardew Valley.
+7. O dono da casa amarela cursa Biologia.
+8. A linguagem que vive na casa do centro assiste Shrek toda noite.
+9. O Python vive na primeira casa.
+10. A linguagem que cursa História vive ao lado de quem joga Roblox.
+11. A linguagem que é viciada em Minecraft vive ao lado de quem cursa Biologia.
+12. A linguagem que cursa Matemática fica assistindo Pokémon enquanto faz contas.
+13. A linguagem C cursa Ciência da Computação.
+14. O Python vive ao lado da casa azul.
+15. A linguagem que cursa História tem um vizinho que assiste Monster High escondido.
+
 ## Tutorial de Resolução do Desafio
 
 A seguir, disponibilizamos um passo-a-passo de como resolver o desafio logicamente:
