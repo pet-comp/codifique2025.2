@@ -3,7 +3,7 @@ const opcoes = {
     Cor: ["Vermelha", "Verde", "Roxa", "Amarela", "Azul"],
     Linguagem: ["Python", "C", "JavaScript", "PHP", "Assembly"],
     Curso: ["Computação", "Biologia", "Educação Física", "Matemática", "História"],
-    "Filme favorito": ["Karatê Kid", "Shrek", "Velozes e Furiosos", "Pokémon", "Monster High"],
+    "Filme favorito": ["Karatê Kid", "Shrek", "Velozes e Furiosos", "Pokémon: O Filme", "Monster High"],
     "Jogo favorito": ["Minecraft", "Stardew Valley", "Celeste", "Roblox", "Zelda"]
 };
 
@@ -18,7 +18,7 @@ function carregarProgresso() {
     const progressoSalvo = localStorage.getItem("progressoJogoEinstein");
     if (progressoSalvo) {
         const casasSalvas = JSON.parse(progressoSalvo);
-        
+
         const tabela = document.querySelector("table");
         if (!tabela) return;
 
@@ -29,7 +29,7 @@ function carregarProgresso() {
             for (let row = 0; row < categorias.length; row++) {
                 const categoria = categorias[row];
                 const select = tabela.rows[row].cells[colunaDaTabela].querySelector("select");
-                
+
                 if (select && casaSalva[categoria]) {
                     select.value = casaSalva[categoria];
                 }
@@ -91,7 +91,7 @@ function criarTabela() {
 
 function pintarColuna(coluna, cor) {
     const tabela = document.querySelector("table");
-    
+
     const mapeamentoCores = {
         "vermelha": "#ce4848ff",   // Rosa claro (quase coral)
         "verde": "#94ce85ff",      // Verde maçã
@@ -171,7 +171,7 @@ function verificar(casas) {
     for (const categoria of categorias) {
         const valoresUnicos = new Set();
         let possuiDuplicatas = false;
-        
+
         for (const casa of casas) {
             if (valoresUnicos.has(casa[categoria])) {
                 possuiDuplicatas = true;
@@ -191,20 +191,20 @@ function verificar(casas) {
         document.getElementById("resultado").style.color = "red";
         return;
     }
-    
+
     // Dica 1: A linguagem PHP vive na casa vermelha.
     if (linguagemCasa("PHP") !== corCasa("Vermelha")) {
-        erros.push("A linguagem PHP não está na casa vermelha.");
+        erros.push("Quem programa em PHP não vive na casa vermelha.");
     }
-    
+
     // Dica 2: A linguagem Assembly já coletou todos os morangos de Celeste.
     if (linguagemCasa("Assembly") !== jogoCasa("Celeste")) {
-        erros.push("Assembly não está jogando Celeste.");
+        erros.push("Quem programa em Assembly não está jogando Celeste.");
     }
 
     // Dica 3: A linguagem JavaScript já foi quase presa por assistir Velozes e furiosos...
     if (linguagemCasa("JavaScript") !== filmeCasa("Velozes e Furiosos")) {
-        erros.push("JavaScript não está assistindo Velozes e Furiosos.");
+        erros.push("Quem programa em JavaScript não está assistindo Velozes e Furiosos.");
     }
 
     // Dica 4: A casa verde fica imediatamente à esquerda da casa roxa.
@@ -229,17 +229,17 @@ function verificar(casas) {
 
     // Dica 8: A linguagem que vive na casa do centro assiste Shrek toda noite.
     if (filmeCasa("Shrek") !== 2) {
-        erros.push("A casa do centro não está assistindo Shrek.");
+        erros.push("Quem mora na casa do centro não está assistindo Shrek.");
     }
 
     // Dica 9: O Python vive na primeira casa.
     if (linguagemCasa("Python") !== 0) {
-        erros.push("Python não está na primeira casa.");
+        erros.push("Quem programa em Python não vive na primeira casa.");
     }
 
     // Dica 10: A linguagem que cursa História vive ao lado de quem joga Roblox.
     if (Math.abs(cursoCasa("História") - jogoCasa("Roblox")) !== 1) {
-        erros.push("História não está ao lado de quem joga Roblox.");
+        erros.push("Quem cursa História não vive ao lado de quem joga Roblox.");
     }
 
     // Dica 11: A linguagem que é viciada em Minecraft vive ao lado de quem cursa Biologia.
@@ -248,25 +248,25 @@ function verificar(casas) {
     }
 
     // Dica 12: A linguagem que cursa Matemática fica assistindo Pokémon enquanto faz contas.
-    if (cursoCasa("Matemática") !== filmeCasa("Pokémon")) {
+    if (cursoCasa("Matemática") !== filmeCasa("Pokémon: O Filme")) {
         erros.push("Quem cursa Matemática não assiste Pokémon.");
     }
 
     // Dica 13: A linguagem C cursa Ciência da Computação.
     if (linguagemCasa("C") !== cursoCasa("Computação")) {
-        erros.push("A linguagem C não está cursando Computação.");
+        erros.push("Quem programa em C não está cursando Computação.");
     }
 
     // Dica 14: O Python vive ao lado da casa azul.
     if (Math.abs(linguagemCasa("Python") - corCasa("Azul")) !== 1) {
-        erros.push("A casa azul não está ao lado do Python.");
+        erros.push("A casa azul não está ao lado da casa de quem programa em Python.");
     }
 
     // Dica 15: A linguagem que cursa História tem um vizinho que assiste Monster High escondido.
     if (Math.abs(cursoCasa("História") - filmeCasa("Monster High")) !== 1) {
         erros.push("O vizinho de quem cursa História não assiste Monster High.");
     }
-    
+
     const resultado = document.getElementById("resultado");
     if (erros.length === 0) {
         resultado.textContent = "Parabéns, a letra que você procura é o Ã";
@@ -279,25 +279,31 @@ function verificar(casas) {
 
 function mostrarDicas() {
     const dicas = [
-        "A linguagem PHP vive na casa vermelha.",
-        "A linguagem Assembly já coletou todos os morangos de Celeste.",
-        "A linguagem JavaScript já foi quase presa por assistir Velozes e furiosos e depois ultrapassar o limite de velocidade achando que estava no filme.",
+        "Quem programa em PHP vive na casa vermelha.",
+        "Quem programa em Assembly já coletou todos os morangos de Celeste.",
+        "Quem programa em JavaScript já foi quase preso por assistir Velozes e furiosos e depois ultrapassar o limite de velocidade achando que estava no filme.",
         "A casa verde fica imediatamente à esquerda da casa roxa.",
         "O dono da casa verde assiste Karatê Kid e depois fica tentando golpear o vento.",
-        "A linguagem que cursa Educação Física fica treinando o dia todo enquanto cuida da sua casinha no Stardew Valley.",
+        "Quem cursa Educação Física fica treinando o dia todo enquanto cuida da sua casinha no Stardew Valley.",
         "O dono da casa amarela cursa Biologia.",
-        "A linguagem que vive na casa do centro assiste Shrek toda noite.",
-        "O Python vive na primeira casa.",
-        "A linguagem que cursa História vive ao lado de quem joga Roblox.",
-        "A linguagem que é viciada em Minecraft vive ao lado de quem cursa Biologia.",
-        "A linguagem que cursa Matemática fica assistindo Pokémon enquanto faz contas.",
-        "A linguagem C cursa Ciência da Computação.",
-        "O Python vive ao lado da casa azul.",
-        "A linguagem que cursa História tem um vizinho que assiste Monster High escondido."
+        "Quem vive na casa do centro assiste Shrek toda noite.",
+        "Quem programa em Python vive na primeira casa.",
+        "Quem cursa História vive ao lado de quem joga Roblox.",
+        "Quem é viciado em Minecraft vive ao lado de quem cursa Biologia.",
+        "Quem cursa Matemática assiste Pokémon: O Filme enquanto faz contas.",
+        "Quem programa em C cursa Ciência da Computação.",
+        "Quem programa em Python vive ao lado da casa azul.",
+        "Quem cursa História tem um vizinho que assiste Monster High escondido."
     ];
 
     const dicasDiv = document.getElementById("dicas");
-    dicasDiv.innerHTML = dicas.map(d => `💡 ${d}`).join("<br>");
+    let dicasTexto = "";
+    let counter = 0;
+    for (let dica of dicas) {
+        counter++;
+        dicasTexto += `💡 <strong>${counter}</strong>. ${dica}<br>`;
+    }
+    dicasDiv.innerHTML = dicasTexto;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
