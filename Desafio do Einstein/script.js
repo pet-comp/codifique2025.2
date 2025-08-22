@@ -269,7 +269,7 @@ function verificar(casas) {
     
     const resultado = document.getElementById("resultado");
     if (erros.length === 0) {
-        resultado.textContent = "Parabéns, O dígido que você procura é o 3";
+        resultado.textContent = "Parabéns, a letra que você procura é o Ã";
         resultado.style.color = "green";
     } else {
         resultado.innerHTML = erros.map(e => `❌ ${e}`).join("<br>");
